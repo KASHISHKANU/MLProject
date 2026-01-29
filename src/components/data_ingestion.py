@@ -5,6 +5,9 @@ from src.logger import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass # helps you create classes mainly to store data
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
+
 
 # for taking input files
 @dataclass # Decorator = a tool that adds extra behavior to a function or method without changing its code.
@@ -42,6 +45,9 @@ class DataIngestion:
         
 if __name__ == "__main__": 
     obj = DataIngestion()
-    obj.initiate_data_ingestion()
+    train_data, test_data, raw_data = obj.initiate_data_ingestion()
+
+    data_transformation = DataTransformation()
+    data_transformation.initiate_data_transformation(train_data,test_data)
 
 
