@@ -67,12 +67,6 @@ MLProject
 └── README.md
 
 
-⚙️ Installation & Setup (Local)
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-pip install -r requirements.txt
-python app.py
-
 📊 Input Parameters
 - Gender
 - Race/Ethnicity
